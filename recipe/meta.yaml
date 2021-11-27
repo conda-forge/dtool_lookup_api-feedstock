@@ -1,5 +1,5 @@
 {% set name = "dtool_lookup_api" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/dtool-lookup-api/dtool-lookup-api-{{ version }}.tar.gz
-  sha256: 95c01a301e32e3a15e92830cd16a0f6abca27a80ae0ccecddb1b3ccfe97450bd
+  sha256: 5ff7bd13edaeb6ba02ff92d2b31b756099774332503ea849600c53192fe7abf5
 
 build:
   number: 0
