@@ -1,11 +1,11 @@
-About dtool_lookup_api
-======================
+About dtool_lookup_api-feedstock
+================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dtool_lookup_api-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/IMTEK-Simulation/dtool-lookup-api
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dtool_lookup_api-feedstock/blob/main/LICENSE.txt)
 
 Summary: This package offers both synchronous and asynchronous implementations of a standardized Python API to communicate with the dtool lookup server.
 
