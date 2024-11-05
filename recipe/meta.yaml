@@ -1,5 +1,5 @@
 {% set name = "dtool_lookup_api" %}
-{% set version = "0.9.1" %}
+{% set version = "0.10.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/dtool-lookup-api/{{ name }}-{{ version }}.tar.gz
-  sha256: ee89315a129993c007916d82a1ed541dc6368d0ceac35bbdcaa21282db381189
+  sha256: a731334e81673c500cb3b9473b85e4d1cc24842073f6a6a9f8045ac1abdd1cba
 
 build:
   number: 0
@@ -22,6 +22,7 @@ requirements:
     - setuptools
     - setuptools_scm
   run:
+    - certifi
     - aiohttp
     - asgiref
     - dtoolcore >=3.9.0
