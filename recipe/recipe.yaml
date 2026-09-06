@@ -1,0 +1,52 @@
+schema_version: 1
+
+context:
+  name: dtool_lookup_api
+  version: "0.10.3"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/dtool-lookup-api/${{ name }}-${{ version }}.tar.gz
+  sha256: 6c8fa14fe7dfd0ce278d88596d0ee98798918bb1e27a0f39bf29332bed739f59
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+    - setuptools_scm
+  run:
+    - certifi
+    - aiohttp
+    - asgiref
+    - dtoolcore >=3.9.0
+    - python >=${{ python_min }}
+    - setuptools
+    - pyyaml
+
+tests:
+  - python:
+      imports:
+        - dtool_lookup_api
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
+
+about:
+  summary: This package offers both synchronous and asynchronous implementations of a standardized Python API to communicate with the dtool lookup server.
+  license: MIT
+  license_file: LICENSE.rst
+  homepage: https://github.com/IMTEK-Simulation/dtool-lookup-api
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
